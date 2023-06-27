@@ -7,7 +7,7 @@
 		function lobby_link_creator(){
 			let getstr = new URLSearchParams(window.location.search);
 			let gotourl = getstr.get('lobbylink');
-			if(gotourl.substr(0,17) == "steam://joinlobby")){
+			if(gotourl.substr(0,17) == "steam://joinlobby"){
 				console.log('going to url',gotourl);
 				window.location.href = gotourl;
 				$("#lobbylink").attr('href',gotourl);
