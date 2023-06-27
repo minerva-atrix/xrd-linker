@@ -7,10 +7,12 @@
 		function lobby_link_creator(){
 			let getstr = new URLSearchParams(window.location.search);
 			let gotourl = getstr.get('lobbylink');
-			console.log('going to url',gotourl);
-			window.location.href = gotourl;
-			$("#lobbylink").attr('href',gotourl);
-			//$("#lobbylink").click();
+			if(gotourl.match(_^steam://joinlobby_)){
+				console.log('going to url',gotourl);
+				window.location.href = gotourl;
+				$("#lobbylink").attr('href',gotourl);
+				//$("#lobbylink").click();
+			}
 		};
 		</script>
 	</head>
