@@ -8,9 +8,9 @@
 	  let getstr = new URLSearchParams(window.location.search);
 	  let gotourl = getstr.get('lobbylink');
 	  console.log('going to url',gotourl);
+	  $("#lobbylink").attr('href',gotourl);  
 	  window.location.href = gotourl;
-	  $("#lobbylink").attr('href',gotourl);
-	  $("#lobbylink").click();
+	  //$("#lobbylink").click();
 	};
     </script>
   </head>
