@@ -1,20 +1,20 @@
 <html>
-  <head>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-	$(document).ready(lobby_link_creator);
+	<head>
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+		$(document).ready(lobby_link_creator);
 
-	function lobby_link_creator(){
-	  let getstr = new URLSearchParams(window.location.search);
-	  let gotourl = getstr.get('lobbylink');
-	  console.log('going to url',gotourl);
-	  $("#lobbylink").attr('href',gotourl);  
-	  window.location.href = gotourl;
-	  //$("#lobbylink").click();
-	};
-    </script>
-  </head>
-  <body>
-    <a id="lobbylink" href="">Join Xrd Game</a>
-  </body>
+		function lobby_link_creator(){
+			let getstr = new URLSearchParams(window.location.search);
+			let gotourl = getstr.get('lobbylink');
+			console.log('going to url',gotourl);
+			window.location.href = gotourl;
+			$("#lobbylink").attr('href',gotourl);
+			//$("#lobbylink").click();
+		};
+		</script>
+	</head>
+	<body>
+		<a id="lobbylink" href="">Join Xrd Game</a>
+	</body>
 </html>
